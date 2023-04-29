@@ -1,5 +1,7 @@
 import models
 
+# All test data for in the database
+
 
 def tag_data():
     data_source = [
@@ -10,7 +12,7 @@ def tag_data():
         {'name_tag': 'TV', 'segment': 'Elektronika'}
     ]
 
-    # INSERT multiple rows
+    # insert all tag data
     models.Tag.insert_many(data_source).execute()
 
 
@@ -22,7 +24,7 @@ def user_data():
             'street': "bospad", 'street_number': 204, 'postcode': '1245QW', 'place': 'Arnhem'}
     ]
 
-    # INSERT multiple rows
+    # insert all user data
     models.User.insert_many(data_source).execute()
 
 
@@ -39,8 +41,19 @@ def product_data():
         {'product_name': 'Houten kast',
             'description': 'Een eiken houten kast van 220 cm hoog', 'price_unit': 250, 'quantity_in_stock': 2, 'user_name': "flipflop", 'name_tag': 'Kast'},
         {'product_name': 'Samsung TV',
-            'description': 'Nieuw Samsung tv voor aan de muur 56inch', 'price_unit': 889, 'quantity_in_stock': 3, 'user_name': "flipflop", 'name_tag': 'TV'}
+            'description': 'Nieuw Samsung tv voor aan de muur 56inch', 'price_unit': 889, 'quantity_in_stock': 3, 'user_name': "boerenkool", 'name_tag': 'TV'}
     ]
 
-    # INSERT multiple rows
+    # insert all product data
     models.Product.insert_many(data_source).execute()
+
+
+def transaction_data():
+    data_source = [
+        {'user_buy': 'flipflop', 'purchased_product': 2, 'quantity': 1},
+        {'user_buy': 'flipflop', 'purchased_product': 4, 'quantity': 3},
+        {'user_buy': 'boerenkool', 'purchased_product': 3, 'quantity': 2}
+    ]
+
+    # insert all transactional data
+    models.Transaction.insert_many(data_source).execute()

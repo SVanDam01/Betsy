@@ -15,13 +15,12 @@ class Tag(peewee.Model):
 
 class User(peewee.Model):
     user_name = peewee.CharField(unique=True)
-    email = peewee.CharField()  # checken op type juist!
+    email = peewee.CharField()
     phonenumber = peewee.IntegerField()  # checken op type juist!
     street = peewee.CharField()
     street_number = peewee.IntegerField()
-    postcode = peewee.CharField()  # checken op type juist!
+    postcode = peewee.CharField(max_length=6)  # checken op type juist!
     place = peewee.CharField()
-    # own_products = peewee.ManyToManyField(Product)  # ook many to many?!
 
     class Meta:
         database = db
@@ -42,12 +41,8 @@ class Product(peewee.Model):
 class Transaction(peewee.Model):
     transaction_date = peewee.DateTimeField(default=datetime.datetime.now)
     user_buy = peewee.ForeignKeyField(User)
-    user_sell = peewee.ForeignKeyField(User)
     purchased_product = peewee.ForeignKeyField(Product)
     quantity = peewee.IntegerField()
 
     class Meta:
         database = db
-
-
-# OwnProducts = User.own_products.get_through_model()
