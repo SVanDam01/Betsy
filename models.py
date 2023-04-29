@@ -2,7 +2,7 @@
 import peewee
 import datetime
 
-db = peewee.SqliteDatabase("betsy.db")
+db = peewee.SqliteDatabase("betsy_shop.sqlite")
 
 
 class Tag(peewee.Model):
@@ -32,7 +32,7 @@ class Product(peewee.Model):
     description = peewee.TextField()
     price_unit = peewee.DecimalField(rounding=2)
     quantity_in_stock = peewee.IntegerField()
-    user_name_id = peewee.ForeignKeyField(User)
+    user_name = peewee.ForeignKeyField(User)
     name_tag = peewee.ForeignKeyField(Tag)
 
     class Meta:

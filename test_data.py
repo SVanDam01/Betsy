@@ -29,17 +29,17 @@ def user_data():
 def product_data():
     data_source = [
         {'product_name': 'Ronde tafel',
-            'description': 'Een mooie ronde tafel', 'price_unit': 110, 'quantity_in_stock': 2, 'user_name_id': 1, 'name_tag': 'Tafel'},
+            'description': 'Een mooie ronde tafel', 'price_unit': 110, 'quantity_in_stock': 2, 'user_name': "flipflop", 'name_tag': 'Tafel'},
         {'product_name': 'Zwarte stoel',
-            'description': 'Zarte stoel voor dikke mensen', 'price_unit': 65, 'quantity_in_stock': 3, 'user_name_id': 1, 'name_tag': 'Stoel'},
+            'description': 'Zarte stoel voor dikke mensen', 'price_unit': 65, 'quantity_in_stock': 3, 'user_name': "flipflop", 'name_tag': 'Stoel'},
         {'product_name': 'Stoel op poten',
-            'description': 'Deze stoel staat op poten', 'price_unit': 74, 'quantity_in_stock': 1, 'user_name_id': 1, 'name_tag': 'Stoel'},
+            'description': 'Deze stoel staat op poten', 'price_unit': 74, 'quantity_in_stock': 1, 'user_name': "flipflop", 'name_tag': 'Stoel'},
         {'product_name': 'Bank voor 3 personen',
-            'description': 'Een bank voor het hele gezin', 'price_unit': 455, 'quantity_in_stock': 1, 'user_name_id': 1, 'name_tag': 'Bank'},
+            'description': 'Een bank voor het hele gezin', 'price_unit': 455, 'quantity_in_stock': 1, 'user_name': "flipflop", 'name_tag': 'Bank'},
         {'product_name': 'Houten kast',
-            'description': 'Een eiken houten kast van 220 cm hoog', 'price_unit': 250, 'quantity_in_stock': 2, 'user_name_id': 1, 'name_tag': 'Kast'},
+            'description': 'Een eiken houten kast van 220 cm hoog', 'price_unit': 250, 'quantity_in_stock': 2, 'user_name': "flipflop", 'name_tag': 'Kast'},
         {'product_name': 'Samsung TV',
-            'description': 'Nieuw Samsung tv voor aan de muur 56inch', 'price_unit': 889, 'quantity_in_stock': 3, 'user_name_id': 2, 'name_tag': 'TV'}
+            'description': 'Nieuw Samsung tv voor aan de muur 56inch', 'price_unit': 889, 'quantity_in_stock': 3, 'user_name': "flipflop", 'name_tag': 'TV'}
     ]
 
     # INSERT multiple rows
